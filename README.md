@@ -4,7 +4,7 @@
 The idea here is to simplify the installation process to the point where one-line is all that's needed to install and configure this app. Paste this command onto your terminal, and make sure you're doing this on a fresh server because this may remove some of your files.
 
 ```shell
-bash <(wget -O - https://github.com/Athlon1600/php-proxy-installer/blob/master/install.sh)
+bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/install.sh)
 ```
 
 
