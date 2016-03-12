@@ -24,6 +24,21 @@ function check_apache(){
 	fi
 }
 
+function check_www(){
+
+	# check if directory exist
+	if [ -d "/var/www/" ]; then
+		echo "Contents of /var/www/ will be removed."
+		read -p "Do you want to continue? [Y/n] "
+		
+		if [[ $REPLY =~ ^[Yy]$ ]]; then
+			rm -rf /var/www/
+		else
+			exit
+		fi
+	fi
+}
+
 function install_cron(){
 
 	# brackets = list of commands to be executed as one unit
@@ -51,11 +66,14 @@ function install_composer(){
 	alias composer='php -d suhosin.executor.include.whitelist=phar /usr/local/bin/composer'
 }
 
-## fresh installations may need to update package locations
-update
-
 # should we even run this script?
 check_apache
+
+# does /var/www/ already exist?
+check_www
+
+## fresh installations may need to update package locations
+update
 
 ## git for composer and bc for math operations - vnstat for bandwidth
 apt-get -y install git bc curl vnstat
