@@ -52,8 +52,8 @@ function install_cron(){
 function update(){
 
 	# dist upgrades
-	apt-get -q update
-	apt-get -q -y upgrade
+	apt-get -qq update
+	apt-get -qq -y upgrade
 }
 
 function install_composer(){
@@ -89,10 +89,10 @@ MAX_CLIENTS=$(( $APACHE_MEM / $APACHE_PROCESS_MEM ))
 
 
 # LAMP setup
-apt-get -qq -y install apache2 php5 libapache2-mod-php5 php5-curl
+apt-get -qq -y install apache2 php libapache2-mod-php php-curl php-mbstring
 
 # we need these mods
-a2enmod ssl status
+a2enmod status
 
 # we don't need these mods. -f to avoid "WARNING: The following essential module will be disabled"
 a2dismod -f deflate alias rewrite
