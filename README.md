@@ -3,9 +3,20 @@
 
 The idea here is to simplify the installation process to the point where one-line is all that's needed to install and configure this app. Paste this command onto your terminal, and make sure you're doing this on a fresh server because this may remove some of your files.
 
+
+For Ubuntu 14.04:
+
+```shell
+bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/eeebc9acfbafc07001c4c1f91e837313609a4e77/install.sh)
+```
+
+For Ubuntu 16.04:
+
 ```shell
 bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/install.sh)
 ```
+
+
 
 ![PHP-Proxy Installation](http://i.imgur.com/I5obvni.png?1)
 
