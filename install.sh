@@ -91,6 +91,11 @@ MAX_CLIENTS=$(( $APACHE_MEM / $APACHE_PROCESS_MEM ))
 # LAMP setup
 apt-get -qq -y install apache2 php libapache2-mod-php php-curl php-mbstring
 
+
+# We need youtube-dl too - this takes a while to install....
+apt-get -qq -y install youtube-dl
+
+
 # we need these mods
 a2enmod status
 
