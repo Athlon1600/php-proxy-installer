@@ -43,7 +43,7 @@ function install_cron(){
 
 	# brackets = list of commands to be executed as one unit
 	# restart apache every 12 hours
-	crontab -l | { cat; echo "0 0,12 * * * service apache2 restart"; } | crontab -
+	crontab -l | { cat; echo "0 0,12 * * * /usr/sbin/service apache2 restart"; } | crontab -
 	
 	# update php-proxy-app everyday on midnight
 	crontab -l | { cat; echo "0 0 * * * /usr/local/bin/composer update --working-dir=/var/www/"; } | crontab -
