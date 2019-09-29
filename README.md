@@ -1,4 +1,3 @@
-
 # Install PHP-Proxy on your Server
 
 The idea here is to simplify the installation process to the point where one-line is all that's needed to install and configure this app. Paste this command onto your terminal, and make sure you're doing this on a fresh server because this may remove some of your files.
@@ -33,10 +32,9 @@ bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installe
 * Cron job to "composer update" the app every 24 hours.
 
 
-
-### Soon to be added
+### To-Do List
 
 * Automatically shut down the server once the bandwidth used exceeds XX terabytes/month.
 
 
-Feel free to fork the project and add your own commands to fully personalize this for your own individual use.
+Feel free to fork this project, and add your own commands to fully customize this for your own individual use.
