@@ -12,7 +12,10 @@ sudo apt-get -y install apache2 php libapache2-mod-php php-curl php-mbstring
 sudo apt-get -y install composer
 
 # We need youtube-dl too - this takes a while to install....
-sudo apt-get -y install youtube-dl
+## sudo apt-get -y install youtube-dl
+
+sudo wget https://yt-dl.org/latest/youtube-dl -O /usr/local/bin/youtube-dl
+sudo chmod a+x /usr/local/bin/youtube-dl
 
 # Apache2 optimization - install what's needed - disable what's not needed.
 # -f to avoid "WARNING: The following essential module will be disabled"
