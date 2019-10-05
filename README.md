@@ -15,6 +15,11 @@ For Ubuntu 16.04:
 bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/install.sh)
 ```
 
+Ubuntu 18:
+```console
+bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/ubuntu18.sh)
+```
+
 
 
 ![PHP-Proxy Installation](http://i.imgur.com/I5obvni.png?1)
