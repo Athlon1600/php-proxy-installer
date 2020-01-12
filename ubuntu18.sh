@@ -54,5 +54,5 @@ sudo apt-get -y install certbot python-certbot-apache
 ## Will ask for an email. Optional: --email email@email.com
 ## Will ask for domain. Optional: --domain domain.com
 ## Make it non-interactive: -n
-sudo certbot --apache --agree-tos --redirect
+sudo certbot --apache --agree-tos --register-unsafely-without-email --redirect
 
