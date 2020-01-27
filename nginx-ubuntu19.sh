@@ -25,6 +25,11 @@ wget https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/ngi
 
 # sudo ln -s /etc/nginx/sites-available/proxy.conf /etc/nginx/sites-enabled/
 
+## Enable status page for PHP-FPM at: /fpm_status
+sed -i -e "s/;pm.status_path = \/status/pm.status_path = \/fpm_status/g" /etc/php/7.3/fpm/pool.d/www.conf
+
+service php7.3-fpm restart
+
 sudo service nginx restart
 
 ## SSL tools
@@ -36,4 +41,3 @@ sudo apt-get -y install certbot python-certbot-nginx
 
 ## Install SSL
 sudo certbot --nginx --agree-tos --register-unsafely-without-email --redirect
-
