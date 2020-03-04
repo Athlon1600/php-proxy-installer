@@ -20,9 +20,12 @@ Ubuntu 18:
 bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/ubuntu18.sh)
 ```
 
-Ubuntu 19 with nginx
+Ubuntu 19 with nginx + SSL
 ```console
 bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/nginx-ubuntu19.sh)
+
+## Install SSL
+sudo certbot --nginx --agree-tos --register-unsafely-without-email --redirect
 ```
 
 
