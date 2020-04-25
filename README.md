@@ -29,7 +29,12 @@ sudo certbot --nginx --agree-tos --register-unsafely-without-email --redirect
 ```
 
 
-![PHP-Proxy Installation](http://i.imgur.com/I5obvni.png?1)
+Optional PHP config for servers with 1 GB of RAM:
+
+```bash
+bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/php/php-fpm-1gb.sh)
+```
+
 
 ![This is what PHP-Proxy looks like when installed](http://i.imgur.com/BvhBPD0.png?2)
 
@@ -50,3 +55,31 @@ sudo certbot --nginx --agree-tos --register-unsafely-without-email --redirect
 
 
 Feel free to fork this project, and add your own commands to fully customize this for your own individual use.
+
+### Useful/Debug
+
+How much memory average php-fpm process uses:
+
+```bash
+ps -ylC php-fpm7.3 --sort:rss
+```
+
+As a single number in megabytes:
+```bash
+ps --no-headers -o "rss,cmd" -C php-fpm7.3 | awk '{ sum+=$1 } END { printf ("%d%s\n", sum/NR/1024,"Mb") }' 
+```
+
+Nginx hangs at 100% CPU.
+
+> TCP: out of memory -- consider tuning tcp_mem
+
+Socket leaks.
+http://alexhoffman.info/blog/tcp-out-of-memory/
+
+> service php7.3-fpm restart
+
+During composer install
+
+```shell
+The "http://repo.packagist.org/p/provider-archived%244b92d0c4ac54205e9b0eb60108508425c627dc43d63463d6800debb88af69674.json" file could not be downloaded: failed to open stream: Connection refused
+```
