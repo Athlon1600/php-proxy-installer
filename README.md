@@ -3,10 +3,22 @@
 The idea here is to simplify the installation process to the point where one-line is all that's needed to install and configure this app. Paste this command onto your terminal, and make sure you're doing this on a fresh server because this may remove some of your files.
 
 
-For Ubuntu 14.04:
+Ubuntu 20 with nginx + SSL
+```console
+bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/nginx-ubuntu20.sh)
 
-```shell
-bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/eeebc9acfbafc07001c4c1f91e837313609a4e77/install.sh)
+## Install SSL
+sudo certbot --nginx --agree-tos --register-unsafely-without-email --redirect
+```
+
+Ubuntu 19:
+```console
+bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/nginx-ubuntu19.sh)
+```
+
+Ubuntu 18:
+```console
+bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/ubuntu18.sh)
 ```
 
 For Ubuntu 16.04:
@@ -15,19 +27,11 @@ For Ubuntu 16.04:
 bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/install.sh)
 ```
 
-Ubuntu 18:
-```console
-bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/ubuntu18.sh)
+For Ubuntu 14.04:
+
+```shell
+bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/eeebc9acfbafc07001c4c1f91e837313609a4e77/install.sh)
 ```
-
-Ubuntu 19 with nginx + SSL
-```console
-bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/nginx-ubuntu19.sh)
-
-## Install SSL
-sudo certbot --nginx --agree-tos --register-unsafely-without-email --redirect
-```
-
 
 Optional PHP config for servers with 1 GB of RAM:
 
