@@ -4,7 +4,7 @@ The idea here is to simplify the installation process to the point where one-lin
 
 
 Ubuntu 20 with nginx + SSL
-```console
+```shell
 bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/nginx-ubuntu20.sh)
 
 ## Install SSL
@@ -12,12 +12,12 @@ sudo certbot --nginx --agree-tos --register-unsafely-without-email --redirect
 ```
 
 Ubuntu 19:
-```console
+```shell
 bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/nginx-ubuntu19.sh)
 ```
 
 Ubuntu 18:
-```console
+```shell
 bash <(wget -O - https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/ubuntu18.sh)
 ```
 
